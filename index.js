@@ -12,11 +12,11 @@ inquirer.prompt([ {
       return 'User name must be valid'
 
     }
-    else if (user.startsWith('-',0)) {
+    else if (user.startsWith('-',0) {
       return 'Username can not start with numbers or special characters'  
-    }
+    };
 
-const finishedMarkdown = profileWriter.generateMarkdown(responseObj)
+const finishedMarkdown = profileWriter.generateMarkdown(responseObj);
 
 fs.writeFile('./profile.md', finishedMarkdown, err =>{
 if(err){
