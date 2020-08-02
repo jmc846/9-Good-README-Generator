@@ -1,7 +1,5 @@
  const inquirer = require ('inquirer');
 const fs = require('fs');
-// const api = require('./util/api.js');
- const generateMarkdown = ('./util/gMkd.js');
 
 const questions = [
   {   
@@ -41,8 +39,8 @@ const questions = [
       name: "test"
   },
   {   
-      message: "What is the user github email address?",
-      name: "GitHub user email"
+      message: "What is the user github link?",
+      name: "GitHub link"
   },
   {   
       message: "Please provide a profile picture",
@@ -50,61 +48,65 @@ const questions = [
   }
 ]
 
-// inquirer.prompt([ {
-//     type:'input',
-//     name:'user',
-//     message:'What is your GitHub username?',
-//     validate: user => {
-//     if (user.length < 1 && user.length);
-//       return 'User name must be valid'
-
-//     } 
-//     // else({user.startsWith('-',0)}{
-//     //   return 'Username can not start with numbers or special characters'
-//     // },
-    
-//     // {
-//     //   type:'input',
-//     // name:'user',
-//     // message:'What is your GitHub username?',
-//     // };
-//   }]);
-
-// var finishedMarkdown = profileWriter.generateMarkdown(responseObj);
-
-// fs.writeFile('./profile.md', finishedMarkdown, err =>{
-// if(err){
-//     console.log(err)
-// } else{
-// console.log('GOOD JOB')
-// };
-
-// })
-
-
-
-// const fs = require('fs');
-
-// fs.writeFile('log.md', process.argv[2], function(err){
-//   if(err){
-//   return console.log(err);
-  
-//   }
-  
-//   console.log('Success!');
-  
-  
-//   });
 
 function init () {
     inquirer.prompt(questions)
     .then((inquirerResponse, data) => {   
         console.log("ReadMe.md generation has begun, wait one moment");
-        fs.writeFileSync("ReadMe.md", `${inquirerResponse}`, data);
+        fs.writeFileSync("ReadMe.md", generateMarkdown(inquirerResponse));
     })
     .catch((err) => {
         console.log(err);
     })
 }
 
+
 init();
+
+
+const generateMarkdown = function generateMarkdown({response}) {
+    return `
+  
+//   # ${response.title}
+// ##title:
+
+  -[title](#title)
+  # Table of Content
+  -[description](#description)
+  -[installation](#installation)
+  -[usage](#usage)
+  -[licenses](#licenses)
+  -[contribution](#contribution)
+  -[test](#test)
+  -[username](#username)
+  -[profile](#profile)
+  
+  ${response.username}
+  ##username:
+  
+      ${response.description}
+  ##description:
+  
+      ${response.installation}
+  ##installation:
+  ${response.usage}
+##usage:
+
+    ${response.licenses}
+##licenses:
+
+    ${response.contribution}
+##contribution:
+
+    ${response.test}
+##test:
+
+    ${response.email}
+##email:
+
+    ${response.profile}
+##profile:
+`;
+}
+
+module.exports = generateMarkdown;
