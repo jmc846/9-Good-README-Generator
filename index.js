@@ -1,5 +1,6 @@
  const inquirer = require ('inquirer');
 const fs = require('fs');
+const CheckboxPrompt = require('inquirer/lib/prompts/checkbox');
 
 const questions = [
   {   
@@ -10,40 +11,52 @@ const questions = [
       message: "Please provide a table on content",
       name: "table of content"
   },
-  {   
+  {   type: 'input',
       message: "What is the name of the user?",
       name: "userName"
   },
   {  
-      message: "Please provide a description of the project",
+    type: 'input',  
+    message: "Please provide a description of the project",
       name: "description"
   },
   {   
-      message: "What is the installation process?",
+    type: 'input',  
+    message: "What is the installation process?",
       name: "installation"
   },
   {   
-      message: "How will this project be used?",
+    type: 'input', 
+    message: "How will this project be used?",
       name: "usage"
   },
   {   
-      message: "What licenses are required with this project?",
-      name: "licenses"
+     type: "checkbox",
+     message: "What licenses are required with this project?",
+      name: "licenses",
+      choices:
+      ["MIT",
+      'Apache',
+      "e6",]
   },
   {   
-      message: "Who were the contributors to this project?",
+    type: 'input',
+    message: "Who were the contributors to this project?",
       name: "contribution"
   },
   {   
-      message: "What is the test process for this project?",
+    type: 'input', 
+    message: "What is the test process for this project?",
       name: "test"
   },
   {   
-      message: "What is the user github link?",
+    type: 'input', 
+    message: "What is the user github link?",
       name: "GitHub link"
   },
   {   
-      message: "Please provide a profile picture",
+    type: 'input',
+    message: "Please provide a profile picture",
       name: "GitHub profile picture"
   }
 ]
@@ -65,9 +78,12 @@ init();
 
 
 const generateMarkdown = function generateMarkdown({response}) {
-    return `
+    return 
+     
+    `
+
   
-//   # ${response.title}
+//   #  ${response.title}
 // ##title:
 
   -[title](#title)
