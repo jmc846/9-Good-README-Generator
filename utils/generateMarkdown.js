@@ -1,9 +1,14 @@
-function generateMarkdown({response}) {
+const generateMarkdown = function (response) {
     return `
   
-  # ${response.title}
+# ${response.title}
   
-  # Table of Content
+# Table of Content
+${response.contents.map(index =>{
+    return `
+[${index[0]}](#${index[0]})
+    `
+})}
   -[description](#description)
   -[installation](#installation)
   -[usage](#usage)
@@ -13,11 +18,11 @@ function generateMarkdown({response}) {
   -[username](#username)
   -[profile](#profile)
   
-  ${response.username}
-  ##username:
+  
+## username: ${response.username}
   
       ${response.description}
-  ##description:
+  ## description:
   
       ${response.installation}
   ##installation:
@@ -41,4 +46,4 @@ function generateMarkdown({response}) {
 `;
 }
 
-module.exports = generateMarkdown;
+module.exports = {generateMarkdown : generateMarkdown};

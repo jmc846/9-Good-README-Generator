@@ -1,18 +1,20 @@
- const inquirer = require ('inquirer');
+const inquirer = require ('inquirer');
 const fs = require('fs');
-const CheckboxPrompt = require('inquirer/lib/prompts/checkbox');
+// const CheckboxPrompt = require('inquirer/lib/prompts/checkbox');
+const makeMarkdown = require('./utils/generateMarkdown');
 
 const questions = [
-  {   
+  {   type: 'input',
       message: "What is the name of the project?",
       name: "title"
   },
-  {   
+  {   type: 'checkbox',
       message: "Please provide a table on content",
-      name: "table of content"
+      name: "contents",
+      choices: ["Description", "installation", "unsername", "licenses","contributions", "test", "email", "profile pic"]
   },
   {   type: 'input',
-      message: "What is the name of the user?",
+      message: "What is the name of the developer",
       name: "userName"
   },
   {  
@@ -51,7 +53,7 @@ const questions = [
   },
   {   
     type: 'input', 
-    message: "What is the user github link?",
+    message: "What is the user github profile link",
       name: "GitHub link"
   },
   {   
@@ -64,9 +66,16 @@ const questions = [
 
 function init () {
     inquirer.prompt(questions)
-    .then((inquirerResponse, data) => {   
+    .then((response) => {   
         console.log("ReadMe.md generation has begun, wait one moment");
-        fs.writeFileSync("ReadMe.md", generateMarkdown(inquirerResponse));
+        const finishedMarkdown = makeMarkdown.generateMarkdown(response);
+        fs.writeFile("README.md",finishedMarkdown, err =>{
+          if(err){
+            console.log(err);
+          } else {
+            console.log("YAY!!!")
+          }
+        });
     })
     .catch((err) => {
         console.log(err);
@@ -76,53 +85,3 @@ function init () {
 
 init();
 
-
-const generateMarkdown = function generateMarkdown({response}) {
-    return 
-     
-    `
-
-  
-//   #  ${response.title}
-// ##title:
-
-  -[title](#title)
-  # Table of Content
-  -[description](#description)
-  -[installation](#installation)
-  -[usage](#usage)
-  -[licenses](#licenses)
-  -[contribution](#contribution)
-  -[test](#test)
-  -[username](#username)
-  -[profile](#profile)
-  
-  ${response.username}
-  ##username:
-  
-      ${response.description}
-  ##description:
-  
-      ${response.installation}
-  ##installation:
-  ${response.usage}
-##usage:
-
-    ${response.licenses}
-##licenses:
-
-    ${response.contribution}
-##contribution:
-
-    ${response.test}
-##test:
-
-    ${response.email}
-##email:
-
-    ${response.profile}
-##profile:
-`;
-}
-
-module.exports = generateMarkdown;
