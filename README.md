@@ -34,7 +34,7 @@
   
       
   ## installation:
-  node js [!Initiation of App]("https://drive.google.com/file/d/1jek-T7qfq_HJH8UTga5GwSQ7WnEh978b/preview" width="640" height="480")
+  node js [!Initiation of App](https://drive.google.com/file/d/1jek-T7qfq_HJH8UTga5GwSQ7WnEh978b/view)
 
   
 ## usage:
