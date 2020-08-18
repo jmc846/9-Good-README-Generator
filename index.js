@@ -1,6 +1,5 @@
 const inquirer = require ('inquirer');
 const fs = require('fs');
-// const CheckboxPrompt = require('inquirer/lib/prompts/checkbox');
 const makeMarkdown = require('./utils/generateMarkdown');
 
 const questions = [
@@ -11,7 +10,7 @@ const questions = [
   {   type: 'checkbox',
       message: "Please provide a table on content",
       name: "contents",
-      choices: ["Description", "installation", "unsername", "licenses","contributions", "test", "email", "profile pic"]
+      choices: ["Description", "installation","Badges", "username","Questions", "licenses","contributions", "test", "email", "app video"]
   },
   {   type: 'input',
       message: "What is the name of the developer",
@@ -26,6 +25,16 @@ const questions = [
     type: 'input',  
     message: "What is the installation process?",
       name: "installation"
+  },
+  { type: 'input',
+    message: 'Provide any Badges',
+    name: 'badges'
+
+  },
+  { type: 'input',
+    message: 'Provide Questions Section',
+    name: 'question'
+
   },
   {   
     type: 'input', 
@@ -44,22 +53,27 @@ const questions = [
   {   
     type: 'input',
     message: "Who were the contributors to this project?",
-      name: "contribution"
+    name: "contribution"
   },
   {   
     type: 'input', 
     message: "What is the test process for this project?",
-      name: "test"
+    name: "test"
   },
   {   
     type: 'input', 
-    message: "What is the user github profile link",
-      name: "GitHub link"
+    message: "What is the user's github profile link",
+    name: "GitHub link"
+  },
+  {   
+    type: 'input', 
+    message: "What is the Contributor's Email",
+    name: "email"
   },
   {   
     type: 'input',
-    message: "Please provide a profile picture",
-      name: "GitHub profile picture"
+    message: "Please provide video of the deployed app",
+    name: "video"
   }
 ]
 

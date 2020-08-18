@@ -4,46 +4,52 @@ const generateMarkdown = function (response) {
 # ${response.title}
   
 # Table of Content
-${response.contents.map(index =>{
-    return `
-[${index[0]}](#${index[0]})
+${response.contents.map(index => {
+        return `
+[${index}](#${index})
     `
-})}
-  -[description](#description)
-  -[installation](#installation)
-  -[usage](#usage)
-  -[licenses](#licenses)
-  -[contribution](#contribution)
-  -[test](#test)
-  -[username](#username)
-  -[profile](#profile)
+    })}
+
   
   
-## username: ${response.username}
+ ## username:
+ ${response.userName}
   
-      ${response.description}
+    
   ## description:
+  ${response.description}
   
-      ${response.installation}
-  ##installation:
-  ${response.usage}
-##usage:
+      
+  ## installation:
+  ${response.installation}
 
-    ${response.licenses}
-##licenses:
+  
+## usage:
+${response.usage}
 
-    ${response.contribution}
-##contribution:
+    
+## licenses:
+${response.licenses}
 
-    ${response.test}
-##test:
+    
+## contribution:
+${response.contribution}
 
-    ${response.email}
-##email:
+    
+## test:
+${response.test}
 
-    ${response.profile}
-##profile:
+    
+## email:
+${response.email}
+
+## userName:
+${response.userName}
+    
+## video:
+${response.video}
+
 `;
 }
 
-module.exports = {generateMarkdown : generateMarkdown};
+module.exports = { generateMarkdown: generateMarkdown };
