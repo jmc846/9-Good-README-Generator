@@ -1,26 +1,24 @@
-  # # Unit 09 Node.js and ES6+
+ # # Unit 09 Node.js and ES6+
   
 # Table of Content
 
-[Description](#Description)
-    ,
-[installation](#installation)
-    ,
-[Badges](#Badges)
-    ,
-[username](#username)
-    ,
-[Questions](#Questions)
-    ,
-[licenses](#licenses)
-    ,
-[contributions](#contributions)
-    ,
-[test](#test)
-    ,
-[email](#email)
-    ,
-[app video](#app video)
+- [Description](#Description)
+- [installation](#installation)
+- [Badges](#Badges)
+
+- [username](#username)
+
+- [Questions](#Questions)
+
+- [licenses](#licenses)
+
+- [contributions](#contributions)
+
+- [test](#test)
+
+- [email](#email)
+
+- [app-video](#video)
     
 
   
@@ -34,9 +32,10 @@
   
       
   ## installation:
-  node js [!Initiation of App](<iframe src="https://drive.google.com/file/d/1jek-T7qfq_HJH8UTga5GwSQ7WnEh978b/preview" width="640" height="480"></iframe>)
+  node js <iframe src="https://drive.google.com/file/d/1jek-T7qfq_HJH8UTga5GwSQ7WnEh978b/preview" width="640" height="480"></iframe>
 
-  
+  ## Badges:
+  [![License](https://poser.pugx.org/ali-irawan/xtra/license.svg)](https://poser.pugx.org/ali-irawan/xtra/license.svg)
 ## usage:
 This project will be used as the README For this project as well, as a generator for future projects
 
@@ -60,5 +59,4 @@ jmc846@scarletmail.rutgers.edu
 Jonathan Cobb
     
 ## video:
-[![video of app](https://drive.google.com/file/d/1jek-T7qfq_HJH8UTga5GwSQ7WnEh978b/view)
-
+<iframe src="https://drive.google.com/file/d/1jek-T7qfq_HJH8UTga5GwSQ7WnEh978b/view" width="640" height="480"></iframe>

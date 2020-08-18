@@ -43,8 +43,8 @@ ${response.test}
 ## email:
 ${response.email}
 
-## userName:
-${response.userName}
+## Badges:
+${response.badges}
     
 ## video:
 ${response.video}
