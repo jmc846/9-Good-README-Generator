@@ -1,62 +1,67 @@
- # # Unit 09 Node.js and ES6+
+# Express Note Taker
   
-# Table of Content
+## Table of Content
 
-- [Description](#Description)
-- [installation](#installation)
-- [Badges](#Badges)
+[Description](#Description)
+    ,
+[installation](#installation)
+    ,
+[Badges](#Badges)
+    ,
+[username](#username)
+    ,
+[Questions](#Questions)
+    ,
+[licenses](#licenses)
+    ,
+[contributions](#contributions)
+    ,
+[test](#test)
 
-- [username](#username)
-
-- [Questions](#Questions)
-
-- [licenses](#licenses)
-
-- [contributions](#contributions)
-
-- [test](#test)
-
-- [email](#email)
-
-- [app-video](#video)
-    
-
+[gitHub](#gitHub)
+    ,
+[email](#email)
+    ,
+[video](#video)
+      
   
-  
- ## username:
+ ### username:
  Jonathan Cobb
   
     
-  ## description:
-  A README generator, an app to generate a quality README for any project
+  ### description:
+  Create an application that can be used to write, save, and delete notes. This application will use an express backend and save and retrieve note data from a JSON file.
   
       
-  ## installation:
-  node js <iframe src="https://drive.google.com/file/d/1jek-T7qfq_HJH8UTga5GwSQ7WnEh978b/preview" width="640" height="480"></iframe>
+  ### installation:
+  node js 
 
-  ## Badges:
-  [![License](https://poser.pugx.org/ali-irawan/xtra/license.svg)](https://poser.pugx.org/ali-irawan/xtra/license.svg)
-## usage:
-This project will be used as the README For this project as well, as a generator for future projects
+  
+  ### usage:
+Project will be used to take notes and delete/update them
 
     
-## licenses:
+### licenses:
 MIT,e6
 
     
-## contribution:
+### contribution:
 Jonathan Cobb
 
     
-## test:
-The making of this README document, serves as the test for this process.
+### test:
+the Deployed app on Heroku will be the test for the project
 
     
-## email:
+### email:
 jmc846@scarletmail.rutgers.edu
 
-## userName:
-Jonathan Cobb
+### gitHub profile:
+undefined
+
+## Badges:
+[![License](https://poser.pugx.org/ali-irawan/xtra/license.svg)](https://poser.pugx.org/ali-irawan/xtra/license.svg)
     
-## video:
-<iframe src="https://drive.google.com/file/d/1jek-T7qfq_HJH8UTga5GwSQ7WnEh978b/view" width="640" height="480"></iframe>
+### video:
+![Note Taker Demo](https://media.giphy.com/media/l4F0x0KyEYHZa4jfdQ/giphy.gif)
+

@@ -3,50 +3,51 @@ const generateMarkdown = function (response) {
   
 # ${response.title}
   
-# Table of Content
+## Table of Content
 ${response.contents.map(index => {
         return `
 [${index}](#${index})
     `
-    })}
-
+    })}  
   
-  
- ## username:
+ ### username:
  ${response.userName}
   
     
-  ## description:
+  ### description:
   ${response.description}
   
       
-  ## installation:
+  ### installation:
   ${response.installation}
 
   
-## usage:
+  ### usage:
 ${response.usage}
 
     
-## licenses:
+### licenses:
 ${response.licenses}
 
     
-## contribution:
+### contribution:
 ${response.contribution}
 
     
-## test:
+### test:
 ${response.test}
 
     
-## email:
+### email:
 ${response.email}
+
+### gitHub profile:
+${response.gitHub}
 
 ## Badges:
 ${response.badges}
     
-## video:
+### video:
 ${response.video}
 
 `;

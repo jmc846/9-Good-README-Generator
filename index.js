@@ -63,7 +63,7 @@ const questions = [
   {   
     type: 'input', 
     message: "What is the user's github profile link",
-    name: "GitHub link"
+    name: "GitHub"
   },
   {   
     type: 'input', 
