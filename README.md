@@ -1,4 +1,6 @@
-# Express Note Taker
+
+  
+# ReadMe Generator
   
 ## Table of Content
 
@@ -17,8 +19,6 @@
 [contributions](#contributions)
     ,
 [test](#test)
-
-[gitHub](#gitHub)
     ,
 [email](#email)
     ,
@@ -26,19 +26,19 @@
       
   
  ### username:
- Jonathan Cobb
+ Jonathan Cobb 
   
     
   ### description:
-  Create an application that can be used to write, save, and delete notes. This application will use an express backend and save and retrieve note data from a JSON file.
+  An app to create a Quality README.md File for any Project
   
       
   ### installation:
-  node js 
+  node js
 
   
   ### usage:
-Project will be used to take notes and delete/update them
+To create README for all future projects
 
     
 ### licenses:
@@ -46,11 +46,11 @@ MIT,e6
 
     
 ### contribution:
-Jonathan Cobb
+Jonathan Cobb Solely
 
     
 ### test:
-the Deployed app on Heroku will be the test for the project
+The README serves as the test for this process
 
     
 ### email:
@@ -63,5 +63,5 @@ undefined
 [![License](https://poser.pugx.org/ali-irawan/xtra/license.svg)](https://poser.pugx.org/ali-irawan/xtra/license.svg)
     
 ### video:
-![Note Taker Demo](https://media.giphy.com/media/l4F0x0KyEYHZa4jfdQ/giphy.gif)
+![README DEMO](https://media.giphy.com/media/WrIm7wlCskcdzshgHL/giphy.gif)
 
